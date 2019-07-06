@@ -1,2 +1,2 @@
-# Cubing Revolution
-Cubing Revolution is where cubers cube. This cubing group is specifically directed for beginners so they can feel more comfortable cubing. This defenitely doesn't exclude proffesional speedcubers!
+# Supercolbat
+My website was made so people can access my projects from Youtube or when I just made one in my free time. Some projects, however, do require you to have the premium subscription.
