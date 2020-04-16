@@ -1,24 +1,246 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Cubing Revolution</title>
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:400">
-        <link rel="stylesheet" type="text/css" href="css/global.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <img src="assets/logo.png" alt="Logo" class="logo"/>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
-                    </ul>
-                </nav>
-            </div>
+	<head>
+		<title>Art Career Questions</title>
+		<style>
+            /* Animations + cross-compatibility */
+            @keyframes animate {
+                0% {
+                    background-position: 0;
+                }
+                100% {
+                    background-position: 1360px;
+                }
+            }
+            @-moz-keyframes animate {
+                0% {
+                    background-position: 0;
+                }
+                100% {
+                    background-position: 1360px;
+                }
+            }
+            @-webkit-keyframes animate {
+                0% {
+                    background-position: 0;
+                }
+                100% {
+                    background-position: 1360px;
+                }
+            }
+            @-o-keyframes animate {
+                0% {
+                    background-position: 0;
+                }
+                100% {
+                    background-position: 1360px;
+                }
+            }
+            @-ms-keyframes animate {
+                0% {
+                    background-position: 0;
+                }
+                100% {
+                    background-position: 1360px;
+                }
+            }
+            @keyframes animate-reverse {
+                0% {
+                    background-position: 1360px;
+                }
+                100% {
+                    background-position: 0;
+                }
+            }
+            @-moz-keyframes animate-reverse {
+                0% {
+                    background-position: 1360px;
+                }
+                100% {
+                    background-position: 0;
+                }
+            }
+            @-webkit-keyframes animate-reverse {
+                0% {
+                    background-position: 1360px;
+                }
+                100% {
+                    background-position: 0;
+                }
+            }
+            @-o-keyframes animate-reverse {
+                0% {
+                    background-position: 1360px;
+                }
+                100% {
+                    background-position: 0;
+                }
+            }
+            @-ms-keyframes animate-reverse {
+                0% {
+                    background-position: 1360px;
+                }
+                100% {
+                    background-position: 0;
+                }
+            }
+            
+            /* Styles */
+			body {
+				font-family: Arial;
+                background-color: #F7F7FF;
+                padding: 0;
+                margin: 0;
+			}
+            header {
+                background-image: url(assets/spacenebula.jpg);
+                display: table;
+                color: #F7F7FF;
+                text-align: center;
+                font-size: 500%;
+            }
+            header > h1 {
+                display: table-cell;
+                vertical-align: middle;
+                font-variant: small-caps;
+            }
+            a, a:visited {
+                color: #73628A;
+                font-weight: 600;
+                text-decoration: none;
+            }
+            a:hover, a:active {
+                color: #73628A;
+            }
+            .wrapper {
+                width: 100%;
+            }
+            section.w, section.r {
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                padding: 5%;
+                width: 100%;
+                display: table;
+            }
+            footer, section.r {
+                color: #F7F7FF;
+                background-color: #FE5F55;
+            }
+            footer {
+                padding: 1%;
+                text-align: center;
+            }
+            #data {
+                display: flex;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+            }
+            .col {
+                float: left;
+                width: 50%;
+                padding: 0 5px;
+                box-sizing: border-box;
+            }
+            .col > img {
+                width: 100%;
+                vertical-align: middle;
+            }
+            .full {
+                width: 100vw;
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .big {
+                font-weight: 800;
+                font-size: 250%;
+            }
+            .ans {
+                margin-left: 5%;
+            }
+            .toggle {
+                cursor: pointer;
+            }
+            #qa > i {
+                background-color: #577399;
+                color: #F7F7FF;
+                padding: 0.5%;
+                float: right;
+            }
+            #a1,#a2,#a3,#a4,#a5,#a6,#a7 {
+                width: 100%;
+                padding: 1%;
+                background-color: #BDD5EA;
+            }
+            /* For parallax */
+            .parallax {
+                width: 100%;
+                height: 100vh;
+                background-attachment: fixed;
+            }
+            
+            /* For the wave */
+            div.wave:before {
+                content: '';
+                width: 100%;
+                height: 142px;
+                background: url(assets/wave.png);
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0.4;
+                animation: animate-reverse 10s linear infinite;
+            }
+            div.wave {
+                position: absolute;
+                width: 100%;
+                height: 142px;
+                bottom: 0;
+                left: 0;
+                background-image: url(assets/wave.png);
+                animation: animate 10s linear infinite;
+            }
+            div.wave:after {
+                content: '';
+                width: 100%;
+                height: 142px;
+                background: url(assets/wave.png);
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0.6;
+                animation-delay: -5s;
+                animation: animate 20s linear infinite;
+            }
+		</style>
+        <script src="jquery-3.5.0.min.js"></script>
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+	</head>
+	<body>
+        <header class="parallax full">
+            <h1>Joey<br>Lent</h1>
         </header>
-    </body>
+        <div class="wave"></div>
+        <div class="wrapper">
+            <section class="r">
+                <h1 class="big">Hello there!</h1>
+                <p>My name is Joey Lent and I <i>love</i> programming <b>&lt;3</b><br>
+                    So to prove my point, I made a website... just to answer 7 questions.</p>
+            </section>
+            <section class="w">
+                I am 12 years old and I study at Beck Junior High. I've been programming for around 4 years, beginning with Logo, a beginner programming language made to teach the basics of programming. I am more comfortable with using Python, but I also use Java, Web (HTML, CSS, JS/JQuery), and some <a href="https://esolangs.org/wiki/Main_Page" target="_blank">esoteric</a> programming languages.
+            </section>
+            <section class="r">
+                <h1 class="big">Questions</h1>
+            </section>
+            <section id="qa" class="w"></section>
+        </div>
+        <footer>
+            Made by <a href="mailto:supercolbat@gmail.com">Joey Lent</a> &bull;
+            2020
+        </footer>
+	</body>
 </html>
