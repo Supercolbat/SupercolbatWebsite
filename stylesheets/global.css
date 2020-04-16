@@ -1,0 +1,14 @@
+body {
+	font-family: Arial;
+    background-color: #F7F7FF;
+    padding: 0;
+    margin: 0;
+}
+a, a:visited {
+    color: #73628A;
+    font-weight: 600;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: #73628A;
+}

@@ -1,0 +1,219 @@
+@keyframes animate {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 1360px;
+    }
+}
+@-moz-keyframes animate {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 1360px;
+    }
+}
+@-webkit-keyframes animate {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 1360px;
+    }
+}
+@-o-keyframes animate {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 1360px;
+    }
+}
+@-ms-keyframes animate {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 1360px;
+    }
+}
+@keyframes animate-reverse {
+    0% {
+        background-position: 1360px;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+@-moz-keyframes animate-reverse {
+    0% {
+        background-position: 1360px;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+@-webkit-keyframes animate-reverse {
+    0% {
+        background-position: 1360px;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+@-o-keyframes animate-reverse {
+    0% {
+        background-position: 1360px;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+@-ms-keyframes animate-reverse {
+    0% {
+        background-position: 1360px;
+    }
+    100% {
+        background-position: 0;
+    }
+}
+
+body {
+	margin: 0;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100px;
+    height: 50px;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    background-color: rgba(0,0,0,1);
+    transform: skew(35deg) scale(.8);
+    transition: 0.5s;
+}
+
+.container img {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.container:hover img:nth-child(4) {
+    transform: translate(60px,-60px);
+    opacity: 1;
+}
+.container:hover img:nth-child(3) {
+    transform: translate(45px,-45px);
+    opacity: .8;
+}
+.container:hover img:nth-child(2) {
+    transform: translate(30px,-30px);
+    opacity: 0.6;
+}
+.container:hover img:nth-child(1) {
+    transform: translate(15px,-15px);
+    opacity: 0.4;
+}
+
+/* Header */
+header {
+    background-image: url(../assets/spacenebula.jpg);
+    display: table;
+    color: #F7F7FF;
+    text-align: center;
+    font-size: 500%;
+}
+
+header > h1 {
+    display: table-cell;
+    vertical-align: middle;
+    font-variant: small-caps;
+}
+
+.wrapper {
+    width: 100%;
+}
+.w, .r {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 5%;
+    width: 100%;
+    display: table;
+}
+footer, section.r {
+    color: #F7F7FF;
+    background-color: #FE5F55;
+}
+footer {
+    padding: 1%;
+    text-align: center;
+}
+
+.full {
+    width: 100vw;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.big {
+    font-weight: 800;
+    font-size: 250%;
+}
+
+/* For parallax */
+.parallax {
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+/* For the wave */
+div.wave:before {
+    content: '';
+    width: 100%;
+    height: 142px;
+    background: url(../assets/wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    animation: animate-reverse 10s linear infinite;
+}
+div.wave {
+    position: absolute;
+    width: 100%;
+    height: 142px;
+    bottom: 0;
+    left: 0;
+    background-image: url(../assets/wave.png);
+    animation: animate 10s linear infinite;
+}
+div.wave:after {
+    content: '';
+    width: 100%;
+    height: 142px;
+    background: url(../assets/wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    animation-delay: -5s;
+    animation: animate 20s linear infinite;
+}
+
+
+#sololearnicon {
+    background-image: url(../assets/sololearn_icon.jpg)
+}
+#repliticon {
+    background-image: url(../assets/repl.it_icon.png)
+}
