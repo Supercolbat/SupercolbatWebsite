@@ -210,6 +210,9 @@ div.wave:after {
     animation: animate 20s linear infinite;
 }
 
+#social-links * {
+    display: inline-block;
+}
 
 #sololearnicon {
     background-image: url(../assets/sololearn_icon.jpg)
