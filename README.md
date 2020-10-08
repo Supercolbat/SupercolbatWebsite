@@ -1,2 +1,0 @@
-# Supercolbat
-Just my website ;)
