@@ -17,11 +17,8 @@ nav li {
     list-style: none;
 }
 
-a, a:visited {
-    color: #73628A;
+a:link, a:visited, a:hover, a:active {
+    color: #FE5F55;
     font-weight: 600;
-    text-decoration: none;
-}
-a:hover, a:active {
-    color: #73628A;
+    text-decoration: none !important;
 }
