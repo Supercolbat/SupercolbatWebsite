@@ -7,20 +7,18 @@ body {
 }
 
 .icon {
-    width: 100px;
-    height: 50px;
-    margin-top: 20%;
-    margin-bottom: 5%;
+    width: 15vw;
+    height: 10vh;
     margin-left: 5%;
-    background-color: rgba(0,0,0,1);
-    transform: skew(35deg) scale(.8);
+    background-color: #000000;
+    transform: skew(20deg) scale(.8);
     transition: 0.5s;
 }
 
 .icon img {
     position: absolute;
     width: 100%;
-    height: 50px;
+    height: 100%;
     transition: 0.5s;
 }
 
