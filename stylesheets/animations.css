@@ -83,33 +83,44 @@
 /* wave */
 div.wave:before {
     content: '';
-    width: 100%;
+
+    width: 100vw;
     height: 142px;
-    background: url(../assets/wave.png);
     position: absolute;
+
+    background: url(../assets/wave.png);
+
     top: 0;
     left: 0;
     opacity: 0.4;
+    
     animation: animate-reverse 10s linear infinite;
 }
 div.wave {
-    position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 142px;
+    position: absolute;
+
+    background-image: url(../assets/wave.png);
+
     bottom: 0;
     left: 0;
-    background-image: url(../assets/wave.png);
+
     animation: animate 10s linear infinite;
 }
 div.wave:after {
     content: '';
-    width: 100%;
+
+    width: 100vw;
     height: 142px;
-    background: url(../assets/wave.png);
     position: absolute;
+
+    background: url(../assets/wave.png);
+   
     top: 0;
     left: 0;
     opacity: 0.6;
+
     animation-delay: -5s;
     animation: animate 20s linear infinite;
 }

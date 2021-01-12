@@ -1,16 +1,9 @@
-body {
-	margin: 0;
-    padding: 0;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Icon */
 .icon {
-    width: 15vw;
-    height: 10vh;
-    margin-left: 5%;
+    width: 30%;
+    height: 25%;
     background-color: #000000;
+    
     transform: skew(20deg) scale(.8);
     transition: 0.5s;
 }
@@ -23,60 +16,20 @@ body {
 }
 
 .icon:hover img:nth-child(4) {
-    transform: translate(60px,-60px);
+    transform: translate(60px, -60px);
     opacity: 1;
 }
 .icon:hover img:nth-child(3) {
-    transform: translate(45px,-45px);
+    transform: translate(45px, -45px);
     opacity: .8;
 }
 .icon:hover img:nth-child(2) {
-    transform: translate(30px,-30px);
+    transform: translate(30px, -30px);
     opacity: 0.6;
 }
 .icon:hover img:nth-child(1) {
-    transform: translate(15px,-15px);
+    transform: translate(15px, -15px);
     opacity: 0.4;
-}
-
-/* Header */
-header {
-    width: 100%;
-    height: 100vh;
-    
-    background-image: url(../assets/spacenebula.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-
-    color: #F7F7FF;
-    text-align: center;
-    font-size: 300%;
-}
-
-header > h1 {
-    display: table-cell;
-    vertical-align: middle;
-    font-variant: small-caps;
-}
-
-.r {
-    background-color: #FE5F55;
-    color: #F7F7FF;
-}
-
-section {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    padding: 5%;
-    width: 100%;
-}
-
-footer {
-    padding: 1%;
-    text-align: center;
 }
 
 .big {

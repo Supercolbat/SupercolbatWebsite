@@ -2,10 +2,11 @@
 <html lang="en">
     <!--
         TODO:
-          - Vertically center header
+          - Static name?
           - Make elements resize on different sized screens
           - Make the social icons less awkward
     -->
+
 	<head>
 		<title>Joey Lent</title>
         
@@ -21,32 +22,34 @@
 	</head>
 	<body>
         <header>
-            <h1 class="row justify-content-center align-self-center big">Joey<br>Lent</h1>
+            <h1>Joey<br>Lent</h1>
         </header>
         <div class="wave"></div>
-        <section class="r">
-            <h1 class="big">Hello there!</h1>
-            <p>I'm Joey Lent and I'm an intermediate programmer. I occasionally post programs I want to show off.</p>
-            <b>CSS issues (yikes!)</b>
-        </section>
+
         <section>
-            <h1 class="big">Programs</h1><br />
+            <h1 class="big">Hello there!</h1>
+            <p>I'm Joey Lent and I'm a, mostly, self-taught programmer. Here I'll feature programs along with other things.</p>
+        </section>
+
+        <section>
+            <h1 class="big">Programs</h1><br>
+            <h3 class="delete">Loading...</h3>
+            <div id="programs"></div>
+        </section>
+
+        <!-- <section>
+            <h1>Pages</h1>
             <div class="row">
-                <div class="col">
-                    <h3><a href="https://github.com/Supercolbat/0x0000" target="_blank">0x0000 <span class="badge badge-warning">WIP</span></a></h3>
-                    <p>An online file hoster.</p>
-                </div>
-                <div class="col">
-                    <h3><a href="https://github.com/Supercolbat/Oneline-Python-Crawler" target="_blank">One Line Python Crawler <span class="badge badge-warning">WIP</span></a></h3>
-                    <p>A Python web crawler written in one line.</p>
-                </div>
-                <div class="col">
-                    <h3><a href="https://github.com/Supercolbat/RoBot" target="_blank">RoBot <span class="badge badge-warning">WIP</span></a></h3>
-                    <p>A framework for making chat-controlled Roblox bots.</p>
-                </div>
+                <div class="col"><a href="./skills.html">Programming Skills</a></div>
+                <div class="col"><a href="./skills-esoteric.html">Esoteric Programming Skills</a></div>
             </div>
         </section>
-        <section class="r">
+
+        <section>
+            <h3>There are supposed to be icons here...</h3>
+            <p>Either way I'm going to be replacing them, but if you want to get the links either way, then look into the page's source.</p>
+            <p>You can also find my TODO list :)</p>
+
             <div class="row">
                 <a href="https://github.com/Supercolbat" target="_blank" class="col">
                     <div class="icon">
@@ -73,11 +76,50 @@
                     </div>
                 </a>
             </div>
+        </section> -->
+
+        <section>
+            <h2>Number of unfinished projects: <b><span id="counter">...</span></b></h2>
         </section>
+
         <footer>
             Made by Joey Lent
             &bull;
             <a href="https://Supercolbat.joeylent.repl.co">Development Version</a>
         </footer>
+
+        <script>
+            $(function() {
+                $.when($.ajax({
+                    dataType: "json",
+                    url: "./data/programs.json",
+                    success: function(data) {
+                        return data;
+                    }
+                })).done(function(data) {
+                    var html = "";
+                    var unfinished = 0;
+                    var chunk;
+
+                    for (var i = 0; i < data.length; i+=3) {
+                        chunk = data.slice(i, i+3);
+
+                        html = `<div class="row">`;
+                        for (var k = 0; k < chunk.length; k++) {
+                            html = html + `<div class="col"><h3>${data[i+k].url ? `<a href="${data[i+k].url} target="_blank">${data[i+k].name}</a>` : data[i+k].name} ${data[i+k].tags.includes("wip") ? ` <span class="badge badge-warning">WIP</span>` : ""}</h3><p>${data[i+k].description}</p></div>`;
+                            
+                            if (data[i+k].tags.includes("wip")) {
+                                unfinished++;
+                            }
+                        }
+                        $("#programs").append(html + "</div>");
+
+                    }
+
+                    $("#counter").text(unfinished);
+                    $(".delete").remove();
+                });
+            })
+        </script>
 	</body>
 </html>
