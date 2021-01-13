@@ -5,6 +5,7 @@
           - Static name?
           - Make elements resize on different sized screens
           - Make the social icons less awkward
+          - Mobile support
     -->
 
 	<head>
@@ -20,7 +21,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <script src="./scripts/index.js"></script>
 	</head>
+
 	<body>
         <header>
             <h1>Joey<br>Lent</h1>
@@ -29,7 +33,7 @@
 
         <section>
             <h1 class="big">Hello there!</h1>
-            <p>I'm Joey Lent and I'm a, mostly, self-taught programmer. Here I'll feature programs along with other things.</p>
+            <p>I'm Joey Lent and I'm a, mostly, self-taught programmer. Here is where I feature my favorite programs.</p>
         </section>
 
         <section>
@@ -88,39 +92,5 @@
             &bull;
             <a href="https://Supercolbat.joeylent.repl.co">Development Version</a>
         </footer>
-
-        <script>
-            $(function() {
-                $.when($.ajax({
-                    dataType: "json",
-                    url: "./data/programs.json",
-                    success: function(data) {
-                        return data;
-                    }
-                })).done(function(data) {
-                    var html = "";
-                    var unfinished = 0;
-                    var chunk;
-
-                    for (var i = 0; i < data.length; i+=3) {
-                        chunk = data.slice(i, i+3);
-
-                        html = `<div class="row">`;
-                        for (var k = 0; k < chunk.length; k++) {
-                            html = html + `<div class="col"><h3>${data[i+k].url ? `<a href="${data[i+k].url} target="_blank">${data[i+k].name}</a>` : data[i+k].name} ${data[i+k].tags.includes("wip") ? ` <span class="badge badge-warning">WIP</span>` : ""}</h3><p>${data[i+k].description}</p></div>`;
-                            
-                            if (data[i+k].tags.includes("wip")) {
-                                unfinished++;
-                            }
-                        }
-                        $("#programs").append(html + "</div>");
-
-                    }
-
-                    $("#counter").text(unfinished);
-                    $(".delete").remove();
-                });
-            })
-        </script>
 	</body>
 </html>
