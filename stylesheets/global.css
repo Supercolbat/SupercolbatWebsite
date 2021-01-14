@@ -34,7 +34,7 @@ header.low {
 }
 
 header:not(.low) {
-    background-image: url(/assets/spacenebula.webp);
+    background-image: url(/assets/spacenebula.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
