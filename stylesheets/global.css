@@ -8,10 +8,14 @@ body {
     padding: 0;
 }
 
-a:link, a:visited, a:hover, a:active {
+a:link, a:visited, a:active {
     color: #FE5F55;
     font-weight: 600;
     text-decoration: none !important;
+}
+
+a:hover {
+    color: #B0322A !important;
 }
 
 .badge, .fas {
