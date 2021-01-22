@@ -22,5 +22,11 @@
         "description": "A terminal written entirely in Python. Only supports Windows.",
         "url": "",
         "tags": ["wip"]
+    },
+    {
+        "name": "SkyView",
+        "description": "View a player's Hypixel Skyblock stats from your phone!",
+        "url": "",
+        "tags": ["wip"]
     }
 ]

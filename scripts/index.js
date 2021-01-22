@@ -12,7 +12,7 @@ $(function() {
     /* Load Programs */
     $.when($.ajax({
         dataType: "json",
-        url: "./data/programs.json",
+        url: "https://supercolbat.joeylent.repl.co/data/programs.json",
         success: function(data) {
             return data;
         }
