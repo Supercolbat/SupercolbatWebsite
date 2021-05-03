@@ -1,3 +1,6 @@
+/**
+ * Animate function
+ */
 function animateScale(element, scale, duration, elasticity) {
     anime.remove(element);
     anime({
@@ -8,7 +11,12 @@ function animateScale(element, scale, duration, elasticity) {
     });
 }
 
+
+/**
+ * Calls on page load
+ */
 $(function() {
+
     /* Load Programs */
     $.when($.ajax({
         dataType: "json",
@@ -39,7 +47,7 @@ $(function() {
         $(".delete").remove();
     });
 
-    /* Animate */
+    /* Implement animations */
     $(".icon").hover(
         function() {
             animateScale(this, 1.25, 800, 400);
@@ -48,4 +56,5 @@ $(function() {
             animateScale(this, 1, 600, 300);
         }
     );
+
 })
