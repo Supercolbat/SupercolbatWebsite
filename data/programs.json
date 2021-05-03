@@ -7,7 +7,7 @@
     },
     {
         "name": "One Line Crawler",
-        "description": "A web crawler written in one line.",
+        "description": "A python web crawler written in one line.",
         "url": "https://github.com/Supercolbat/Oneline-Python-Crawler",
         "tags": ["wip"]
     },
@@ -24,9 +24,9 @@
         "tags": ["wip"]
     },
     {
-        "name": "SkyView",
-        "description": "View a player's Hypixel Skyblock stats from your phone!",
-        "url": "",
+        "name": "Mist",
+        "description": "A desktop messaging application.",
+        "url": "https://github.com/Supercolbat/Mist",
         "tags": ["wip"]
     }
 ]
