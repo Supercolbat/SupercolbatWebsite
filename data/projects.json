@@ -9,12 +9,12 @@
         "name": "RoBot",
         "description": "A framework for making chat-controlled Roblox bots.",
         "url": "https://github.com/Supercolbat/RoBot",
-        "tags": ["wip"]
+        "tags": ["v0.1-beta"]
     },
     {
         "name": "Muck1337",
         "description": "Utility mod for Muck, a game made by DaniDev.",
         "url": "https://github.com/Supercolbat/Muck1337",
-        "tags": ["wip"]
+        "tags": ["v0.2.1"]
     }
 ]
