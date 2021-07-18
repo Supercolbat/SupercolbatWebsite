@@ -34,11 +34,22 @@ $(function() {
 
             html = `<div class="row">`;
             for (var k = 0; k < chunk.length; k++) {
-                html = html + `<div class="col"><h3>${data[i+k].url ? `<a href="${data[i+k].url}" target="_blank">${data[i+k].name}</a>` : data[i+k].name} ${data[i+k].tags.includes("wip") ? ` <span class="badge badge-warning">WIP</span>` : ""}</h3><p>${data[i+k].description}</p></div>`;
+                badges = ""
+                for (var tagIndex; tagIndex < data[i+k].tags.length; tagIndex++) {
+                    if (data[i+k].tags[tagIndex] == "wip") {
+                        badges = badges + `<span class="badge badge-warning">WIP</span>`;
+                    } else if (data[i+k].tags[tagIndex][0] == "v") {
+                        badges = badges + `<span class="badge badge-info">${data[i+k].tags[tagIndex]}</span>`;
+                    }
+                }
+                // really messy code
+                html = html + `<div class="col"><h3>${data[i+k].url ?\
+                    `<a href="${data[i+k].url}" target="_blank">${data[i+k].name}</a>` : data[i+k].name} ${badges}</h3><p>${data[i+k].description}</p></div>`;
                 
                 if (data[i+k].tags.includes("wip")) {
                     unfinished++;
                 }
+
             }
             $("#projects").append(html + "</div>");
         }
