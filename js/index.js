@@ -40,7 +40,7 @@ $(function() {
                     unfinished++;
                 }
             }
-            $("#programs").append(html + "</div>");
+            $("#projects").append(html + "</div>");
         }
 
         $("#counter").text(unfinished);
