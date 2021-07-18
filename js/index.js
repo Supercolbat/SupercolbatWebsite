@@ -43,8 +43,7 @@ $(function() {
                     }
                 }
                 // really messy code
-                html = html + `<div class="col"><h3>${data[i+k].url ?\
-                    `<a href="${data[i+k].url}" target="_blank">${data[i+k].name}</a>` : data[i+k].name} ${badges}</h3><p>${data[i+k].description}</p></div>`;
+                html = html + `<div class="col"><h3>${data[i+k].url ? `<a href="${data[i+k].url}" target="_blank">${data[i+k].name}</a>` : data[i+k].name} ${badges}</h3><p>${data[i+k].description}</p></div>`;
                 
                 if (data[i+k].tags.includes("wip")) {
                     unfinished++;
