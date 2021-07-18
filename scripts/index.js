@@ -12,7 +12,7 @@ $(function() {
     /* Load Programs */
     $.when($.ajax({
         dataType: "json",
-        url: "https://supercolbat.joeylent.repl.co/data/programs.json",
+        url: "https://supercolbat.joeylent.repl.co/data/projects.json",
         success: function(data) {
             return data;
         }
@@ -32,7 +32,7 @@ $(function() {
                     unfinished++;
                 }
             }
-            $("#programs").append(html + "</div>");
+            $("#projects").append(html + "</div>");
         }
 
         $("#counter").text(unfinished);
