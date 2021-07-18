@@ -20,7 +20,7 @@ $(function() {
     /* Load Programs */
     $.when($.ajax({
         dataType: "json",
-        url: "https://raw.githubusercontent.com/Supercolbat/Supercolbat/master/data/programs.json",
+        url: "https://raw.githubusercontent.com/Supercolbat/Supercolbat/master/data/projects.json",
         success: function(data) {
             return data;
         }
